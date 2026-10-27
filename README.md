@@ -145,6 +145,12 @@ results/               benchmark output (CSV + PNG)
 - The proxy speaks HTTP/1.1 with `Connection: close` (one request per connection) and does not support keep-alive, TLS, chunked request bodies or WebSockets.
 - Not production software; see [REPORT.md](REPORT.md) for details.
 
+## One-command demo
+
+    python demo.py
+
+Starts the backends and the proxy in one process, benchmarks round-robin, least-connections and ML under a steady and a slowdown scenario, and prints a comparison table. On Windows you can also double-click `run_demo.bat`.
+
 ## Tech stack
 
 Python, `asyncio`, raw TCP sockets, scikit-learn, pandas, matplotlib.
